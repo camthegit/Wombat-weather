@@ -34,3 +34,28 @@ class WeatherTS(Document):
                 "temp": 11
             }
         }
+
+
+class WeatherAGG(Document):
+    year: int
+    month: int
+    day: int
+    hour: int
+    source: str
+    avgTemp: Optional[float]
+    avgPressure: Optional[float]
+    avgHumidity: Optional[float]
+    avgDirection: Optional[float]
+    avgSpeed: Optional[float]
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "year": 2022,
+                "month": 7,
+                "day": 11,
+                "hour": 15,
+                "source": "DHT22",
+                "avgTemp": 13.4
+            }
+        }
