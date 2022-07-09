@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from app.server.database import init_db
 from app.server.routes.past_weather import router as Router
-
-"""example application from https://testdriven.io/blog/fastapi-beanie/"""
+"""Runs the Weather data api and initialised the Mongodb connection using start_db.init_db
+example application from https://testdriven.io/blog/fastapi-beanie/"""
 
 
 app = FastAPI()
