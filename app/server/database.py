@@ -7,9 +7,12 @@ from app.configs import cnf as configs
 
 
 async def init_db():
-    mongo_connect = f"mongodb://{configs.MONGO_HOST}:{configs.MONGO_PORT}/weather"
-    client = motor.motor_asyncio.AsyncIOMotorClient(
-        mongo_connect
-    )
+    if configs.MONGO_USER != '' or configs.MONGO_PW != '':
+        mongo_connect = f"mongodb://{configs.MONGO_USER}:{configs.MONGO_PW}@" \
+                        f"{configs.MONGO_HOST}:{configs.MONGO_PORT}/weather" \
+                        f"?authSource=admin&tls=true&allowInvalidCertificates=true"
+    else:
+        mongo_connect = f"mongodb://{configs.MONGO_HOST}:{configs.MONGO_PORT}/weather"
 
+    client = motor.motor_asyncio.AsyncIOMotorClient(mongo_connect)
     await init_beanie(database=client.weather, document_models=[WeatherTS])
