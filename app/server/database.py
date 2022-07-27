@@ -14,5 +14,7 @@ async def init_db():
     else:
         mongo_connect = f"mongodb://{configs.MONGO_HOST}:{configs.MONGO_PORT}/weather"
 
+    # Todo: remove following debug print
+    print(f"DB Connect string: {mongo_connect}")
     client = motor.motor_asyncio.AsyncIOMotorClient(mongo_connect)
     await init_beanie(database=client.weather, document_models=[WeatherTS])
