@@ -7,7 +7,7 @@ from app.configs import cnf as configs
 
 
 async def init_db():
-    if configs.MONGO_USER != '' or configs.MONGO_PW != '':
+    if configs.MONGO_USER != '' or configs.MONGO_USER is None:
         mongo_connect = f"mongodb://{configs.MONGO_USER}:{configs.MONGO_PW}@" \
                         f"{configs.MONGO_HOST}:{configs.MONGO_PORT}/weather" \
                         f"?authSource=admin&tls=true&allowInvalidCertificates=true"
