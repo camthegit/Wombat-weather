@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ## TEST the daemon start command first
 # Copy and enable the daemon
-cp /apps/huey/server/units/weather.service /etc/systemd/system/
+cp /apps/obs/src/server/units/weather.service /etc/systemd/system/
 
 systemctl start weather
 systemctl status weather
