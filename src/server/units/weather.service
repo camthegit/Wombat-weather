@@ -13,7 +13,7 @@ PrivateTmp=true
 # /\ /\ <- Added post recording for better restart perf.
 
 # Requires systemd version 211 or newer
-RuntimeDirectory=/apps/obs
+RuntimeDirectory=/apps/obs/src
 Restart=always
 Type=notify
 StandardError=syslog
