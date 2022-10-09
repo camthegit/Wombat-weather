@@ -2,7 +2,7 @@ from beanie import PydanticObjectId
 from fastapi import APIRouter, HTTPException
 from typing import List
 
-from app.server.models.ts_test import WeatherTS, WeatherAGG
+from src.server.models.ts_test import WeatherTS, WeatherAGG
 
 router = APIRouter()
 

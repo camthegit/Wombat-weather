@@ -1,8 +1,8 @@
 from beanie import init_beanie
 import motor.motor_asyncio
 
-from app.server.models.ts_test import WeatherTS
-from app.configs import cnf as configs
+from src.server.models.ts_test import WeatherTS
+from src.configs import cnf as configs
 """Imports configs from .env and environment, creates connect string and connects to Mongodb weather dbase"""
 
 
