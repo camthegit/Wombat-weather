@@ -13,7 +13,8 @@ PrivateTmp=true
 # /\ /\ <- Added post recording for better restart perf.
 
 # Requires systemd version 211 or newer
-RuntimeDirectory=/apps/obs/src
+# RuntimeDirectory=/apps/obs/src
+RuntimeDirectory=weather
 Restart=always
 Type=notify
 StandardError=syslog
