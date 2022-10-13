@@ -17,7 +17,10 @@ class WeatherTS(Document):
     direction: Optional[float]
     speed: Optional[float]
     gust: Optional[float]
+    rain: Optional[float]
     cpuTemp: Optional[float]
+    skyTemp: Optional[float]
+    ambientTemp: Optional[float]
 
     class Settings:
         timeseries = TimeSeriesConfig(
