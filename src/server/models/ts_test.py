@@ -16,6 +16,8 @@ class WeatherTS(Document):
     humidity: Optional[float]
     direction: Optional[float]
     speed: Optional[float]
+    gust: Optional[float]
+    cpuTemp: Optional[float]
 
     class Settings:
         timeseries = TimeSeriesConfig(
@@ -47,6 +49,8 @@ class WeatherAGG(Document):
     avgHumidity: Optional[float]
     avgDirection: Optional[float]
     avgSpeed: Optional[float]
+    avgGust: Optional[float]
+    avgCpuTemp: Optional[float]
 
     class Config:
         schema_extra = {

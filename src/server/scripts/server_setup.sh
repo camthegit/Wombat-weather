@@ -72,7 +72,7 @@ apt install nginx
 # CAREFUL HERE. If you are using default, maybe skip this
 rm /etc/nginx/sites-enabled/default
 
-cp /apps/huey/server/nginx/weather.nginx /etc/nginx/sites-enabled/
+cp /apps/obs/src/server/nginx/weather.nginx /etc/nginx/sites-enabled/
 update-rc.d nginx enable
 service nginx restart
 
