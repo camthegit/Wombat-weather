@@ -8,7 +8,7 @@ server {
         gzip            on;
         gzip_buffers    8 256k;
 
-        alias /apps/huey/server/static;
+        alias /apps/obs/src/server/static;
         expires 365d;
     }
     location / {
